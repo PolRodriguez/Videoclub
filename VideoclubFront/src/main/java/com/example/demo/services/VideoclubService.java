@@ -50,6 +50,6 @@ public class VideoclubService {
 	}
 	
 	public void eliminarReserva(int id_pelicula) {
-		restTemplate.delete(url+"/api/reserva/{id_pelicula}", id_pelicula);
+		restTemplate.delete(url+"/api/reservas/eliminar/{id_pelicula}", id_pelicula);
 	}
 }

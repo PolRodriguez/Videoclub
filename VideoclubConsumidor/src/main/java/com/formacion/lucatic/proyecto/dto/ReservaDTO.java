@@ -1,9 +1,12 @@
 package com.formacion.lucatic.proyecto.dto;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class ReservaDTO {
+public class ReservaDTO implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private int id_pelicula;
 	private String nombreCliente;
 	private String DNI;

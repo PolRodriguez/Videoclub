@@ -20,7 +20,7 @@ public class PeliculaService implements IPeliculaService {
 	@Override
 	public List<PeliculaDTO> peliculas() {
 		// TODO Auto-generated method stub
-		return Convertidor.convertirLista((List<Pelicula>) peliculaRepository.findAll());
+		return Convertidor.convertirLista((List<Pelicula>) peliculaRepository.findByDisponible(true));
 	}
 
 	@Override

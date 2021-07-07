@@ -1,6 +1,10 @@
 package com.formacion.lucatic.proyecto.dto;
 
-public class PeliculaDTO {
+import java.io.Serializable;
+
+public class PeliculaDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private Integer id_pelicula;
 	private String categoria;
 	private String titulo;

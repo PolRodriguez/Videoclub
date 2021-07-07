@@ -1,5 +1,6 @@
 package com.example.demo.services;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,8 @@ public class ReservaService implements IReservaService {
 
 	@Override
 	public void create(ReservaDTO reserva) {
+		java.util.Date utilDate = new java.util.Date();
+		reserva.setFechaAlquiler(new Date(utilDate.getTime()));
 		Reserva r = Convertidor.convertirReservaDTO(reserva);
 		reservaRepo.save(r);
 	}
