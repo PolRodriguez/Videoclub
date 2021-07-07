@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,12 +27,12 @@ public class Controlador {
 	
 	/*************************************CREATE*************************************/
 	@PostMapping("/reservas/alta")
-	public void nuevaReserva(@RequestBody ReservaDTO reserva) {
+	public void nuevaReserva( ReservaDTO reserva) {
 		reservaService.create(reserva);
 	}
 	
 	@PostMapping("/historico/alta")
-	public void nuevoHistorico(@RequestBody HistoricoDTO historico) {
+	public void nuevoHistorico( HistoricoDTO historico) {
 		historicoService.create(historico);
 	}
 	

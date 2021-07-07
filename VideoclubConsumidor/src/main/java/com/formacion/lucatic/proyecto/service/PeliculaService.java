@@ -28,7 +28,7 @@ public class PeliculaService {
 	}
 
 	public PeliculaDTO get(Integer id) {
-		return restTemplate.getForObject(get, PeliculaDTO.class);
+		return restTemplate.getForObject(get, PeliculaDTO.class, id);
 	}
 
 	public PeliculaDTO save(PeliculaDTO cita) {

@@ -26,6 +26,7 @@ public class PeliculaDTO {
 
 	public PeliculaDTO(Pelicula p) {
 		super();
+		this.id_pelicula = p.getId_pelicula();
 		this.categoria = p.getCategoria();
 		this.titulo = p.getTitulo();
 		this.director = p.getDirector();

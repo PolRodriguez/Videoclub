@@ -19,14 +19,14 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 @Controller
 public class VideoclubController {
 
-	@Autowired
-	List<Pelicula> getPeliculas;
-	
-	@Autowired
-	List<Reserva> getReservas;
-	
-	@Autowired
-	List<Historico> getHistorico;
+//	@Autowired
+//	List<Pelicula> getPeliculas;
+//	
+//	@Autowired
+//	List<Reserva> getReservas;
+//	
+//	@Autowired
+//	List<Historico> getHistorico;
 	
 	@Autowired
 	VideoclubService videoclubService;
@@ -38,19 +38,19 @@ public class VideoclubController {
 	
 	@RequestMapping("/peliculas/disponibles")
 	public String getPeliculasDisponibles(Model model) {
-		model.addAttribute("peliculas", getPeliculas);
+		model.addAttribute("peliculas", videoclubService.getPeliculas());
 		return "peliculasDisponibles";
 	}
 	
 	@RequestMapping("/peliculas/reservadas")
 	public String getPeliculasReservadas(Model model) {
-		model.addAttribute("reservadas", getReservas);
+		model.addAttribute("reservadas", videoclubService.getReservas());
 		return "peliculasReservadas";
 	}
 	
 	@RequestMapping("/peliculas/historico")
 	public String getHistorico(Model model) {
-		model.addAttribute("historico", getHistorico);
+		model.addAttribute("historico", videoclubService.getHistorico());
 		return "historico";
 	}
 	

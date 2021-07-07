@@ -33,8 +33,8 @@ public class MiControlador {
 	}
 
 	
-	@GetMapping("/peliculas/{idPelicula}")
-	public PeliculaDTO peliculaById(@PathVariable("idPelicula") int idPelicula) {
+	@GetMapping("/peliculas/{id_pelicula}")
+	public PeliculaDTO peliculaById(@PathVariable("id_pelicula") int idPelicula) {
 		return peliculaService.peliculaById(idPelicula);
 	}
 	
@@ -46,8 +46,8 @@ public class MiControlador {
 	
 	
 	
-	@DeleteMapping("peliculas/eliminar/{idPelicula}")
-	public void deleteTramite(@PathVariable("idPelicula") int idPelicula) {
+	@DeleteMapping("peliculas/eliminar/{id_pelicula}")
+	public void deleteTramite(@PathVariable("id_pelicula") int idPelicula) {
 		peliculaService.eliminar(idPelicula);
 	}
 	

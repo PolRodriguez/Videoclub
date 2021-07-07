@@ -4,7 +4,7 @@ public class PeliculaDTO {
 	private Integer id_pelicula;
 	private String categoria;
 	private String titulo;
-	private String directo;
+	private String director;
 	private Integer duracion;
 	private Boolean disponible;
 
@@ -35,12 +35,12 @@ public class PeliculaDTO {
 		this.titulo = titulo;
 	}
 
-	public String getDirecto() {
-		return directo;
+	public String getDirector() {
+		return director;
 	}
 
-	public void setDirecto(String directo) {
-		this.directo = directo;
+	public void setDirector(String directo) {
+		this.director = directo;
 	}
 
 	public Integer getDuracion() {

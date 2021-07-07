@@ -26,7 +26,7 @@ public class ReservaService {
 	}
 
 	public ReservaDTO get(Integer id) {
-		return restTemplate.getForObject(get, ReservaDTO.class);
+		return restTemplate.getForObject(get, ReservaDTO.class, id);
 	}
 
 	public ReservaDTO save(ReservaDTO cita) {
