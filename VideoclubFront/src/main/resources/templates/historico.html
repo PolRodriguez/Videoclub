@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Videoclub</title>
+</head>
+<body>
+	<div th:replace="shared/nav"></div>
+	<br>
+	<div class="container-fluid" style="margin-top: 100px;">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">ID_Historico</th>
+					<th scope="col">ID_Pelicula</th>
+					<th scope="col">Nombre Cliente</th>
+					<th scope="col">DNI</th>
+					<th scope="col">Telefono</th>
+					<th scope="col">Email</th>
+					<th scope="col">Fecha Alquiler</th>
+					<th scope="col">Fecha Devolucion</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="h : ${historico}">
+					<td th:text="${h.id}"></td>
+					<td th:text="${h.id_pelicula}"></td>
+					<td th:text="${h.nombreCliente}"></td>
+					<td th:text="${h.dni}"></td>
+					<td th:text="${h.telefono}"></td>
+					<td th:text="${h.email}"></td>
+					<td th:text="${h.fechaAlquiler}"></td>
+					<td th:text="${h.fechaDevolucion}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
